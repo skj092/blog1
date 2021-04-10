@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Pytorch - Your Favourite Deep Learning Library | Another data science student’s blogs</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Pytorch - Your Favourite Deep Learning Library" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Some most common operation using Pytorch." />
+<meta property="og:description" content="Some most common operation using Pytorch." />
+<link rel="canonical" href="https://skj092.github.io/blog/markdown/2020/01/14/Pytorch.html" />
+<meta property="og:url" content="https://skj092.github.io/blog/markdown/2020/01/14/Pytorch.html" />
+<meta property="og:site_name" content="Another data science student’s blogs" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-01-14T00:00:00-06:00" />
+<script type="application/ld+json">
+{"url":"https://skj092.github.io/blog/markdown/2020/01/14/Pytorch.html","@type":"BlogPosting","headline":"Pytorch - Your Favourite Deep Learning Library","dateModified":"2020-01-14T00:00:00-06:00","datePublished":"2020-01-14T00:00:00-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://skj092.github.io/blog/markdown/2020/01/14/Pytorch.html"},"description":"Some most common operation using Pytorch.","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/blog/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://skj092.github.io/blog/feed.xml" title="Another data science student's blogs" /><link rel="shortcut icon" type="image/x-icon" href="/blog/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.css" integrity="sha512-h7nl+xz8wgDlNM4NqKEM4F1NkIRS17M9+uJwIGwuo8vGqIl4BhuCKdxjWEINm+xyrUjNCnK5dCrhM0sj+wTIXw==" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.js" integrity="sha512-/CMIhXiDA3m2c9kzRyd97MTb3MC6OVnx4TElQ7fkkoRghwDf6gi41gaT1PwF270W6+J60uTmwgeRpNpJdRV6sg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/contrib/auto-render.min.js" integrity="sha512-Do7uJAaHZm5OLrIv/yN4w0iG1dbu01kzdMNnFfu/mAqgUk6Nniv2JYHcwH+cNwjqgLcqcuBBk+JRvprLVI8azg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha512-0doc9hKxR3PYwso42RD1p5ySZpzzuDiOwMrdCEh2WdJZCjcmFKc/wEnL+z8fBQrnHoiNWbo+3fiGkOYXBdQp4A==" crossorigin="anonymous"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement( document.body, {
+        delimiters: [
+            {left: "$$", right: "$$", display: true},
+            {left: "[%", right: "%]", display: true},
+            {left: "$", right: "$", display: false}
+        ]}
+        );
+    });
+    </script>
+
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/blog/">Another data science student&#39;s blogs</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/blog/about/">About Me</a><a class="page-link" href="/blog/search/">Search</a><a class="page-link" href="/blog/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Pytorch - Your Favourite Deep Learning Library</h1><p class="page-description">Some most common operation using Pytorch.</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-01-14T00:00:00-06:00" itemprop="datePublished">
+        Jan 14, 2020
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      2 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/blog/categories/#markdown">markdown</a>
+        
+      
+      </p>
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul class="section-nav">
+<li class="toc-entry toc-h1"><a href="#some-most-common-operation-using-pytorch">Some most common operation using Pytorch</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#1-transpose">1. transpose()</a></li>
+<li class="toc-entry toc-h2"><a href="#2-stack">2. stack()</a></li>
+<li class="toc-entry toc-h2"><a href="#3-where">3. where()</a></li>
+<li class="toc-entry toc-h2"><a href="#4-backward">4. backward()</a></li>
+<li class="toc-entry toc-h2"><a href="#5-add">5. add()</a></li>
+<li class="toc-entry toc-h2"><a href="#conclusion">Conclusion</a></li>
+</ul>
+</li>
+</ul><h1 id="some-most-common-operation-using-pytorch">
+<a class="anchor" href="#some-most-common-operation-using-pytorch" aria-hidden="true"><span class="octicon octicon-link"></span></a>Some most common operation using Pytorch</h1>
+
+<p>Pytorch is an open source machine learning library probably easiest to start with. It is built by Facebook. In this notebook I will write and discuss five most common and important functions in pytorch.</p>
+
+<ol>
+  <li>torch.transpose()</li>
+  <li>torch.stack()</li>
+  <li>torch.where()</li>
+  <li>torch.backward()</li>
+  <li>torch.add()</li>
+</ol>
+
+<p><img src="/blog/images/torch.png" alt="" title="pytorch"></p>
+
+<h2 id="1-transpose">
+<a class="anchor" href="#1-transpose" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. transpose()</h2>
+<p>In linear algebra, the transpose of a matrix is an operator which flips a matrix over its diagonal, that is it switches the row and column indices of the matrix by producing. Here we will transpose tensor using pytorch transpose function.</p>
+
+<p><img src="/blog/i/blogges/t1.jpg" alt="" title="transpose1"></p>
+
+<p>x is a 2-D tensor. we swapped dimension 0 to dimension 1 using torch.transpose()</p>
+
+<p><img src="/blog/images/t2.png" alt="" title="transpose2"></p>
+
+<p>we swapped dimension 1 to dimension 0.</p>
+
+<p><img src="/blog/images/t3.png" alt="" title="transpose3"></p>
+
+<p>We need to put the dimension which is going to be swapped without. And if we put same dimension twice it has no effect.</p>
+
+<p>Transpose function is very useful while matrix multiplication</p>
+
+<h2 id="2-stack">
+<a class="anchor" href="#2-stack" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. stack()</h2>
+
+<p>This function conconate every new tensor in new dimension. It add every new tensor to additional dimension</p>
+
+<p><img src="/blog/images/s1.png" alt="" title="stack"></p>
+
+<p>Here we stacked b over a and created an additional dimesion.</p>
+
+<p><img src="/blog/images/s2.png" alt="" title="stack"></p>
+
+<p>Here b is the stack of 3 a tensor
+<img src="/blog/images/s3.png" alt="" title="stack"></p>
+
+<p>To make an stack, all tensors need to be in equal size.</p>
+
+<p>While working with images data, stack function is useful for numerical calculation.</p>
+
+<p>For example- to calculate statistical values like mean, median, etc. Stacking makes easy to calculate all of these.</p>
+
+<h2 id="3-where">
+<a class="anchor" href="#3-where" aria-hidden="true"><span class="octicon octicon-link"></span></a>3. where()</h2>
+<p>Returns tensor of element with given condition</p>
+
+<p><img src="/blog/blogmages/w1.png" alt="" title="where"></p>
+
+<p>torch.where() returns a tensor with values y if x&gt;0 else it return x.</p>
+
+<p><img src="/blog/images/w2.png" alt="" title="where"></p>
+
+<p>here we find the difference between x and y. This function can be used as a loss function in binary classification problems, where the target variable is similar like x and predicted value like y.</p>
+
+<p><img src="/blog/images/w3.png" alt="" title="where"></p>
+
+<p>If size of y is less then x then pytorch automatically expand y to the size of x without additional memory. However if the size of y is greater then x, the it doesn’t work.</p>
+
+<p>This function can be used as a loss function in binary classification problems.</p>
+
+<h2 id="4-backward">
+<a class="anchor" href="#4-backward" aria-hidden="true"><span class="octicon octicon-link"></span></a>4. backward()</h2>
+<p>This function is most important function in mathine leanring. It calculate the gradient of a function.</p>
+
+<p><img src="/blog/images/b1.png" alt="" title="backward">
+<img src="/blog/images/b2.png" alt="" title="backward">
+<img src="/blog/images/b3.png" alt="" title="backward"></p>
+
+<p>To calculate gradient we need to set requires_grad = True.</p>
+
+<p>While updating the weight in gradient descent backword function is used to update the weight.</p>
+
+<h2 id="5-add">
+<a class="anchor" href="#5-add" aria-hidden="true"><span class="octicon octicon-link"></span></a>5. add()</h2>
+
+<p>To add two tensor</p>
+
+<p><img src="/blog/images/a1.png" alt="" title="add"></p>
+
+<p>Here add function just work like + operator.</p>
+
+<p><img src="/blog/images/a2.png" alt="" title="add"></p>
+
+<p>As you can see above the size of y is not the size of x. But pytorch expand the size of y by replacating its data and do elementwise operation.</p>
+
+<p><img src="/blog/images/a3.png" alt="" title="add"></p>
+
+<p>Here the size of y is greator then the size of x but x doesn’t expand. Pytorch expand in every dimension, if it increase the dimension of x then it will become 3*3 still doesn’t match the size of y.</p>
+
+<p>It is very helpful while doing tensor operation. Additional operator is one of the most used operator</p>
+
+<h2 id="conclusion">
+<a class="anchor" href="#conclusion" aria-hidden="true"><span class="octicon octicon-link"></span></a>Conclusion</h2>
+<p>We have covered five most useful pytorch function. Go the the pytorch documentation and write five function of your choice.</p>
+
+<p><strong>Reference</strong></p>
+
+<ul>
+  <li><a href="https://pytorch.org/docs/stable/tensors.html">Official Pytorch Documentation</a></li>
+</ul>
+
+  </div><a class="u-url" href="/blog/markdown/2020/01/14/Pytorch.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/blog/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/blog/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/blog/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p></p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/skj092" title="skj092"><svg class="svg-icon grey"><use xlink:href="/blog/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/Sonu_Kumar_Jha" title="Sonu_Kumar_Jha"><svg class="svg-icon grey"><use xlink:href="/blog/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
