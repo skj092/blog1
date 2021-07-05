@@ -136,13 +136,15 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Artificial-Intelligence">Artificial Intelligence<a class="anchor-link" href="#Artificial-Intelligence"> </a></h2><p>Artificial intelligence (AI) is a  branch of computer science capable of performing tasks that typically require human intelligence.</p>
+<p><img src="https://www.oreilly.com/library/view/deep-learning/9781491924570/assets/dpln_0101.png" alt="" /></p>
 <h2 id="What-is-Deep-Learning?">What is Deep Learning?<a class="anchor-link" href="#What-is-Deep-Learning?"> </a></h2><blockquote><p>deep learning is a more approachable name for an artificial neural network. The “deep” in deep learning refers to the depth of the network. An artificial neural network can be very shallow.</p>
 </blockquote>
 <ul>
 <li>Machine learning is the science of getting computers to act without being explicitly programmed.</li>
 </ul>
 <h2 id="ANN:Artificial-Neural-Networks">ANN:Artificial Neural Networks<a class="anchor-link" href="#ANN:Artificial-Neural-Networks"> </a></h2><ul>
-<li>ANNs are inspired by biological neurons found in cerebral cortex of our brain.</li>
+<li>ANNs are inspired by biological neurons found in cerebral cortex of our brain.
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Blausen_0657_MultipolarNeuron.png/1200px-Blausen_0657_MultipolarNeuron.png" alt="" /></li>
 </ul>
 <ul>
 <li>A neuron or nerve cell is an electrically excitable cell that communicates with other cells via specialized connections called synapses.</li>
@@ -150,10 +152,15 @@ window.onload = wrap_img;
 </ul>
 <h2 id="Perceptron">Perceptron<a class="anchor-link" href="#Perceptron"> </a></h2><p><strong>A Perceptron is one of the simplese ANN architectures, invented in 1957 by Frank Rosenblatt.</strong></p>
 <blockquote><p>A perceptron works similar to a biological neuron. A biological neuron receives electrical signals from its <em>dendriles</em>, modulates the electrical signals in various amounts, and then fires an output signal through its <em>synapses</em> only when the total strength of the input signals exceeds a certain threshold. The output is then fed to another neuron, and so forth.</p>
+<p>To model the biological phenomenon, the artificial neuron performs two consecutive functions:it calculates the <em>weighted sum</em> of the inputs to represent the totgal strength of the input signals, and it applies a <em>step function</em> to the result to determine whether to fire the ourput 1 if the signal exceeds a certain threshold of 0 if the signal doesn't exceed the threshold.
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/ArtificialNeuronModel_english.png/1200px-ArtificialNeuronModel_english.png" alt="" />
+<strong>How Peceptron Works?</strong>
+The perceptron's learning logic goes like this:</p>
 </blockquote>
-<p><strong>How Peceptron Works?</strong>
-The perceptron's learning logic goes like this:1. The neuron calculate the weighted sum and applies the activation function to make a prediction y<sup>^</sup>. This is called the feedforward process:
-
+<ol>
+<li>The neuron calculate the weighted sum and applies the activation function to make a prediction y<sup>^</sup>. This is called the feedforward process:</li>
+</ol>
+<p>
 $$y\hat{} =  activation\left(\sum\nolimits x_i \cdot w_i + b\right)$$
 </p>
 <ol>
@@ -174,13 +181,16 @@ $$error = y-y\hat{}$$
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Here's how a since perceptron works to classify two classes :</p>
+<p>Here's how a since perceptron works to classify two classes : 
+<img src="/blog/images/copied_from_nb/pp1.gif" alt="" /></p>
 <p><strong>Drawback of perceptron.</strong>
 Sometimes its not possible to get desired result with only perceptron. In the below example you can see the 
-model in not able to draw a line to classify the data(linearly inseperable data)</p>
-<p><strong>Indroduction of ANN</strong>
-If you increase the number of neuron then you cann see model works pretty well. The stack of more than one neuron is called Multi Layer Perceptron or ANN.</p>
-<p><strong>ANN using Keras</strong></p>
+model in not able to draw a line to classify the data(linearly inseperable data)
+<img src="/blog/images/copied_from_nb/pp2.gif" alt="" />
+<strong>Indroduction of ANN</strong>
+If you increase the number of neuron then you cann see model works pretty well. The stack of more than one neuron is called Multi Layer Perceptron or ANN.
+<img src="/blog/images/copied_from_nb/ann.gif" alt="" />
+<strong>ANN using Keras</strong></p>
 
 </div>
 </div>
