@@ -151,6 +151,30 @@ window.onload = wrap_img;
 <h2 id="Perceptron">Perceptron<a class="anchor-link" href="#Perceptron"> </a></h2><p><strong>A Perceptron is one of the simplese ANN architectures, invented in 1957 by Frank Rosenblatt.</strong></p>
 <blockquote><p>A perceptron works similar to a biological neuron. A biological neuron receives electrical signals from its <em>dendriles</em>, modulates the electrical signals in various amounts, and then fires an output signal through its <em>synapses</em> only when the total strength of the input signals exceeds a certain threshold. The output is then fed to another neuron, and so forth.</p>
 </blockquote>
+<p><strong>How Peceptron Works?</strong>
+The perceptron's learning logic goes like this:1. The neuron calculate the weighted sum and applies the activation function to make a prediction y<sup>^</sup>. This is called the feedforward process:
+
+$$y\hat{} =  activation\left(\sum\nolimits x_i \cdot w_i + b\right)$$
+</p>
+<ol>
+<li>It compares the output prediction with the correct label to calculate the error:</li>
+</ol>
+<p>
+$$error = y-y\hat{}$$
+</p>
+<ol>
+<li><p>It then update the weight. If the prediction is too high, it adjust the weight to make a lower prediction the next time, and vice versa.</p>
+</li>
+<li><p>Repeat!</p>
+</li>
+</ol>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Here's how a since perceptron works to classify two classes :</p>
 
 </div>
 </div>
