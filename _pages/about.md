@@ -4,7 +4,7 @@ title: About Me
 permalink: /about/
 ---
 
-I am a mathematics graduate passionate about data science in general deep learning in particular. 
+[I](https://docs.google.com/document/d/e/2PACX-1vQDugDtoMXrFYo_cPL6v7zvsvfHr4xi9zMNaWv-YIe2C3JGXKIuq2VH2cXa79HxGd7PpJdJJf2JXWj0/pub) am a mathematics graduate passionate about data science in general deep learning in particular. 
 
 ### Projects : 
 
