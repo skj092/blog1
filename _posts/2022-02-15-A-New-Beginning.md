@@ -24,7 +24,7 @@ I am also chasing my long term goal. Even though I am practising machine learnin
 feel like a beginner. But it happens with everyone, in the journey of gaining knowledge you spend more time 
 in the low confident zone. I must be one the middle of the Dunning-Kruger Curve.
 
-<img src="..\images\new-beginning\The-Dunning-Kruger-Curve.png" alt="he-Dunning-Kruger-Curve" width="880"/>
+![The-Dunning-Kruger-Curve](https://user-images.githubusercontent.com/43055935/153991513-581bdce2-aba4-4746-a3ae-eef4506583ab.png)
 
 While you feel uncomfortable in the low confident zone, it is also the most beautiful and important zone. It 
 teaches us lots of valuable things in life. It teaches us - Discipline and Persistence which is the amazing 
