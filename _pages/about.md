@@ -8,15 +8,24 @@ permalink: /about/
 
 ### Projects : 
 
-- **[Data Analysis](https://github.com/skj092/Exploratory-data-analysis)**
-- **[Machine Learning](https://github.com/skj092/Machine_Learning)**
+- **[Pets Breeds Classification](https://github.com/skj092/Image-Classification-with-Stanford-Dogs-Dataset)**
+- **[Fruit Image Object Detection](https://github.com/skj092/Fruit-Images-for-Object-Detection)**
+- **[Detect and Blur Face ](https://github.com/skj092/Face_Blur)**
+- **[Leaf Disease Classification](https://github.com/skj092/LeafDiseaseClassification)**
+- **[Poetry Generator](https://github.com/skj092/Poetry-Generator)**
+- **[House Price Prediction](https://github.com/skj092/House_Price_Prediction)**
+- **[Credit Risk Analysis](https://github.com/skj092/Credit_Risk_Analysis)**
+- **[Review Scrapper](https://github.com/skj092/ReviewScrapper)**
 
-### Skills and Certificates : 
+### Cources and Certificates : 
 * Data Science, [Imarticus Learning](https://imarticus.org/)
 * **[Python](https://www.hackerrank.com/certificates/6a8d73202b5e)**
 * **[Deep Learning with PyTorch Zero to GANs](https://jovian.ai/certificate/MFQWCMZYGQ)**
 
 ### Education : 
+**M.Sc IT, Artificial Intelligence Specialization, Mumbai University**<br>
+*11/2021-Current*<br>
+Data Science, Big Data, Image Processing, Machine Learning, Deep Learning, Computer Vision, NLP, <br>
 
 **B.Sc Mathematics, Mithibai College, Mumbai University**<br>
 *04/2015-03/2018*<br>
