@@ -21,6 +21,7 @@ permalink: /about/
 * Data Science, [Imarticus Learning](https://imarticus.org/)
 * **[Python](https://www.hackerrank.com/certificates/6a8d73202b5e)**
 * **[Deep Learning with PyTorch Zero to GANs](https://jovian.ai/certificate/MFQWCMZYGQ)**
+* **[Machine Learning A-Z (Python & R in Data Science Course)](https://www.udemy.com/course/machinelearning/)**
 
 ### Education : 
 **M.Sc IT, Artificial Intelligence Specialization, Mumbai University**<br>
