@@ -17,7 +17,7 @@ permalink: /about/
 - **[Credit Risk Analysis](https://github.com/skj092/Credit_Risk_Analysis)**
 - **[Review Scrapper](https://github.com/skj092/ReviewScrapper)**
 
-### Cources and Certificates : 
+### Skills and Certificates : 
 * Data Science, [Imarticus Learning](https://imarticus.org/)
 * **[Python](https://www.hackerrank.com/certificates/6a8d73202b5e)**
 * **[Deep Learning with PyTorch Zero to GANs](https://jovian.ai/certificate/MFQWCMZYGQ)**
