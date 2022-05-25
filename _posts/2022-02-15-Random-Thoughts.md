@@ -3,9 +3,9 @@ toc: true
 layout: post
 description: 
 categories: [writing]
-title: A New Beginning
+title: Random Thoughts
 ---
-# A New Beginning
+# Random Thoughts
 
 Writing is one of the best habits one can have. I have tried again and again to make it my daily habit. 
 Though I used to write in a freeform style whatever comes into my mind. It calms the mind down and I feel
