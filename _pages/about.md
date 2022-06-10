@@ -5,8 +5,11 @@ permalink: /about/
 ---
 
 [I](https://docs.google.com/document/d/e/2PACX-1vQDugDtoMXrFYo_cPL6v7zvsvfHr4xi9zMNaWv-YIe2C3JGXKIuq2VH2cXa79HxGd7PpJdJJf2JXWj0/pub) am a mathematics graduate passionate about data science in general deep learning in particular. I love to learn new things and glow. I've spent the last 3 years glowing as a developer through experice and education.
+
 I prefer to think of myself as an open-minded, down to earch and outgoint person. I care very much for people who I come across in my life and try to make their lives easier. I love nature as well, this is hwy I like to go on camping, hiking and all sorts of adventure activities. 
+
 I also like to ready about anthropology, psychology and history to know how we all grow and why we are what we are. I am not sure if it's tru but I like to think that whatever we do it has a reason most of the time we are not aware of our acting but it always has the reason.
+
 I am currently working as a Web Developer at Accenture Solution and build machine learning project in my free time.
 
 
