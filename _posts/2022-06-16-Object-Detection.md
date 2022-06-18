@@ -63,43 +63,29 @@ objects in the scene.</p>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<ol>
-<li>Divide the image into number of SxS cells</li>
-<li>IF Center of an object falls into a grid cess, that grid cell is responsible for detecting that object.</li>
-<li>Each grid cell predict B bounding boxes and conficence score for those boxes. </li>
-<li>If no object exists in that cess, the conficence score should be zero othersise confidence score is equal to Pr(Object)<em>IoU</em>(truth|pred)</li>
-<li>Each bounding box consists of 5 prediction: x,y,w,h and confidnece. The (x,y) coordinates represent the center of the box relative to the bounds of grid cell. The width and height are predicted relative to the whole image. Finally the conficence preeiction represents the IoU between the predicted box and ground truth box. </li>
-</ol>
+<p>Step1: It divides image into SxS grid cells.</p>
+<p>Step2: Each cell will generate B objects and produce the output in the format. (tx, ty, tw, th, po) + number of classes with score.</p>
+<p>Step3: If we are trying to detect dog and cat (i.e. class=2) and B = 1 then the 1st grid cell will produce center coordinate of grid cell, width and height (randomly generated) of 1 image and the objectness score which should be close to zero as there is no center of object in 1st grid. And class score of dog and cat.</p>
+<p>Step4: Similarly the centered cess (heighlighted in red) will produce output (x,y) - center of the cell, (w, h) - width and height of dog highlighted in yellow and conditional probability of dog and cat.</p>
+<p>Step5: Note: Except to width and height of images, will be generated randomly so except for the values of (tx, ty) all the remaining value will be random and incorrect.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Each grid cess also predict C conditional class probabilities, Pr(class|Object). YOLO predict only one set of class probabilities per grid cess,
-regredless of the number of boxes B. 
-At test time it multiply the conditional class probabilityies and the indivicual box conficence prediction.</p>
+<p><strong>Training</strong></p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>For example: To evluate Pascal VOC, YOLO Paper used S = 7, B = 2, and Pascal VOC has 20 label so C=20</p>
-<ol>
-<li>The image will be divided into 7x7 cell</li>
-<li>For B = 2, each grid cell will predict 2 bounding box and confidence score for each. </li>
-<li>The bounding box  contain (x, y, w, h and conficence) for each grid cell. So the output vector so far is 7x7x(2x5)</li>
-<li>Each grid cess also predict 1 Conditional class probabilities for each class. So the output vector will be 7x7x(2x5+C)
-But C = 20 for Pascal VOC so the final output vector will be 7X7X(2X5+20) = 7x7x30 </li>
-</ol>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Architecture</strong></p>
+<ul>
+<li>When we start training the algorithm we pass image as well as the co-ordinate of objects in the format (x, y, w, h) where (x, y) represent center of each object and (w, h) is the width and height of objects. </li>
+<li>In the first step model will take the image and product co-ordinate of each cell along with width and height of object, objectness score and class score. </li>
+<li>These values will get compared with the original values and with each iteration model will improve all the values and train the networl.</li>
+</ul>
 
 </div>
 </div>
