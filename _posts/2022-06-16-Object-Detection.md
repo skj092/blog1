@@ -58,7 +58,9 @@ objects in the scene.</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Step1: It divides image into SxS grid cells.</p>
+<p><img src="/blog/images/copied_from_nb/../images/od1.PNG" alt=""></p>
 <p>Step2: Each cell will generate B objects and produce the output in the format. (tx, ty, tw, th, po) + number of classes with score.</p>
+<p><img src="/blog/images/copied_from_nb/../images/od2.PNG" alt=""></p>
 <p>Step3: If we are trying to detect dog and cat (i.e. class=2) and B = 1 then the 1st grid cell will produce center coordinate of grid cell, width and height (randomly generated) of 1 image and the objectness score which should be close to zero as there is no center of object in 1st grid. And class score of dog and cat.</p>
 <p>Step4: Similarly the centered cess (heighlighted in red) will produce output (x,y) - center of the cell, (w, h) - width and height of dog highlighted in yellow and conditional probability of dog and cat.</p>
 <p>Step5: Note: Except to width and height of images, will be generated randomly so except for the values of (tx, ty) all the remaining value will be random and incorrect.</p>
