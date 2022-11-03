@@ -15,12 +15,9 @@ I am currently working as a Web Developer at Accenture Solution and solving mach
 
 ### Projects : 
 
-- **[Pets Breeds Classification](https://github.com/skj092/Image-Classification-with-Stanford-Dogs-Dataset)**
-- **[Fruit Image Object Detection](https://github.com/skj092/Fruit-Images-for-Object-Detection)**
-- **[Detect and Blur Face ](https://github.com/skj092/Face_Blur)**
-- **[Leaf Disease Classification](https://github.com/skj092/LeafDiseaseClassification)**
-- **[Poetry Generator](https://github.com/skj092/Poetry-Generator)**
-- **[House Price Prediction](https://github.com/skj092/House_Price_Prediction)**
-- **[Credit Risk Analysis](https://github.com/skj092/Credit_Risk_Analysis)**
-- **[Review Scrapper](https://github.com/skj092/ReviewScrapper)**
-
+|Computer Vision|Machine Lerning|
+|---------------|----|
+|[Counting Fruit in Video Frame with YOLO and DeepSORT](https://github.com/skj092/Apple-Orange-Detection)|[Leaaf Disease Classification](https://github.com/skj092/LeafDiseaseClassification)|
+|[Helmet Detection on Construction Site](https://github.com/skj092/Apple-Orange-Detection)|[House Price Prediction](https://github.com/skj092/House_Price_Prediction)|
+|[Gender and Age Prediction](https://github.com/skj092/Gender-and-Age-Prediction)|[Peetry Generator using Seq-to-Seq LSTM](https://github.com/skj092/Poetry-Generator)|
+|[Blink Counter](https://github.com/skj092/OpenCV-Projects/tree/main/Blink_Counter)|[Credit Risk Analysis](https://github.com/skj092/Credit_Risk_Analysis)|
