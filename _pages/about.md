@@ -18,6 +18,6 @@ I am currently working as a Web Developer at Accenture Solution and solving mach
 |Computer Vision|Machine Lerning|
 |---------------|----|
 |[Counting Fruit in Video Frame with YOLO and DeepSORT](https://github.com/skj092/Apple-Orange-Detection)|[Leaaf Disease Classification](https://github.com/skj092/LeafDiseaseClassification)|
-|[Helmet Detection on Construction Site](https://github.com/skj092/Apple-Orange-Detection)|[House Price Prediction](https://github.com/skj092/House_Price_Prediction)|
+|[Helmet Detection on Construction Site](https://github.com/skj092/HardHat-Detection)|[House Price Prediction](https://github.com/skj092/House_Price_Prediction)|
 |[Gender and Age Prediction](https://github.com/skj092/Gender-and-Age-Prediction)|[Peetry Generator using Seq-to-Seq LSTM](https://github.com/skj092/Poetry-Generator)|
 |[Blink Counter](https://github.com/skj092/OpenCV-Projects/tree/main/Blink_Counter)|[Credit Risk Analysis](https://github.com/skj092/Credit_Risk_Analysis)|
